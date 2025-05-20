@@ -1,0 +1,5 @@
+{
+  "simple": "Summarize the French Revolution.",
+  "instructive": "Please provide a concise and well-structured summary of the key events and consequences of the French Revolution in under 100 words.",
+  "chain_of_thought": "Let's think step by step. First, outline the causes of the French Revolution. Then describe key events, and finally summarize its outcomes."
+}

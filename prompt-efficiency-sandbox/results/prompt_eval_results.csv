@@ -1,0 +1,4 @@
+Prompt Style,Latency (s),Tokens Used,Output Quality
+simple,0.82,103,0.89
+instructive,1.11,124,0.94
+chain_of_thought,1.43,138,0.97
