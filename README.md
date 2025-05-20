@@ -80,6 +80,3 @@ Eva Paunova
 🔗 LinkedIn
 📂 Portfolio
 
-yaml
-Copy
-Edit
