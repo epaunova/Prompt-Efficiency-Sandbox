@@ -6,41 +6,44 @@ This project compares different prompt engineering strategies by measuring:
 - 📦 Token usage
 - 🧠 Output quality
 
-It helps identify which prompts are more efficient and effective when interacting with large language models (LLMs) — balancing cost, speed, and clarity.
+It demonstrates how prompt structure impacts performance, cost, and readability — essential for designing reliable LLM-based applications.
 
 ---
 
 ## 🧠 Prompt Variants Tested
 
 1. **Simple Prompt**  
-   _"Summarize the French Revolution."_
+   `"Summarize the French Revolution."`
 
 2. **Instructional Prompt**  
-   _"Please provide a concise and well-structured summary of the key events and consequences of the French Revolution in under 100 words."_
+   `"Please provide a concise and well-structured summary of the key events..."`
 
 3. **Chain-of-Thought Prompt**  
-   _"Let's think step by step. First, outline the causes... Then describe key events... Finally, summarize outcomes."_
+   `"Let's think step by step. First, outline the causes..."`
 
 ---
 
 ## 📊 Metrics Captured
 
-- `Latency (s)` – simulated response time
-- `Tokens Used` – simulated output length
-- `Output Quality` – scored on a 0.0–1.0 scale
-
-All values are mocked for reproducibility, but the structure can be adapted for real LLM calls via OpenAI or other APIs.
+| Metric         | Source                                 |
+|----------------|----------------------------------------|
+| Latency (s)    | Simulated, via `time.sleep()`          |
+| Tokens Used    | Simulated integer range                |
+| Output Quality | Manual scores (see `/evals`)           |
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 prompt-efficiency-sandbox/
-├── scripts/ # Jupyter notebook and benchmark code
-│ └── prompt_latency_comparison.ipynb
-├── results/ # Evaluation logs, token counts, latency samples
-├── models/ # Prompt templates, prompt-style configs
-├── evals/ # Manual or automated quality scoring
+├── scripts/
+│ └── prompt_latency_comparison.ipynb # Main notebook
+├── results/
+│ └── prompt_eval_results.csv # Latency + token metrics
+├── models/
+│ └── prompt_templates.json # Prompt definitions
+├── evals/
+│ └── manual_output_scores.md # Manual evaluation
 └── README.md
 
 yaml
@@ -49,30 +52,34 @@ Edit
 
 ---
 
-## 📓 Run the Notebook
+## 📓 How to Run
 
 ```bash
 cd scripts
 jupyter notebook prompt_latency_comparison.ipynb
 You’ll see:
 
-Tabular comparison of 3 prompts
+Table with prompt efficiency comparison
 
-Bar charts for latency, token usage, and quality
+Charts for latency, token count, and output quality
 
-🔗 Related Project
-💡 For full-scale evaluation with GPT-assisted grading, check out my LLM Evaluation Toolkit
+🔗 Key Files
+📓 Example Notebook
 
-🧪 Note
-This is a sandbox project to demonstrate prompt efficiency benchmarking. Can be extended with:
+📄 Prompt Templates
 
-Real LLM API integration
+📊 Prompt Evaluation CSV
 
-Token tracking (via tiktoken)
+🧾 Manual Quality Scores
 
-Output evaluation pipeline (manual or model-based)
+💡 Related Projects
+✨ LLM Evaluation Toolkit — structured GPT-based output evaluation
 
 👤 Author
 Eva Paunova
 🔗 LinkedIn
 📂 Portfolio
+
+yaml
+Copy
+Edit
